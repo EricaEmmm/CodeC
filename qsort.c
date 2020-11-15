@@ -88,9 +88,9 @@ int main()
         printf("%d ", a[i][0]);
 
     //字符串排序
-    char s[3][4] = {"cad", "sbd", "abc"};
-    qsort(s, 3, sizeof(s[0]), compStr_up);
-    for (int i = 0; i < 3; i++)
+    char s[5][5] = {"scd", "sbdf", "sbda", "sbd","abc"};
+    qsort(s, 5, sizeof(s[0]), compStr_up);
+    for (int i = 0; i < 5; i++)
         printf("%s ", s[i]);
 
 
