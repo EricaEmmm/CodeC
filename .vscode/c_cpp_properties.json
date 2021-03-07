@@ -3,7 +3,10 @@
         {
             "name": "Win32",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/tools/inc",
+                "${workspaceFolder}/securec/include",
+                "F:/MinGW/include"
             ],
             "defines": [
                 "_DEBUG",

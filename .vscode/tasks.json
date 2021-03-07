@@ -7,7 +7,12 @@
             "label": "gcc",
             "type": "shell",
             "command": "g++",
-            "args": ["-g","${file}","-o","${fileBasenameNoExtension}.exe"],    // 编译命令参数
+            "args": ["-g","${file}",
+                     "-o","${fileBasenameNoExtension}.exe",
+                     "-fpermissive",
+                     "-lregex",
+                     //"-std=c11",
+                    ],    // 编译命令参数
             "group": "build",
             //"presentation": {
             //    // Reveal the output only if unrecognized errors occur.

@@ -10,6 +10,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #define TEST_FUNC_BEGIN() \
     int errCnt_ = 0
@@ -22,6 +23,15 @@
     }
 
 #define SHOULDNT(cond) SHOULD(!(cond))
+
+#define STR_MATCH(str1, str2) \
+    if (strcmp(str1, str2)) { \
+        errCnt_++; \
+        (void)printf("Failed at line %d of file %s\n", \
+                     __LINE__, __FILE__); \
+    }
+
+#define STR_DNT_MATCH(cond) STR_MATCH(!(cond))
 
 #define TEST_FUNC_END() do { \
     (void)printf("%-32s: ", __FUNCTION__); \
